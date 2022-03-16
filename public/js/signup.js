@@ -1,8 +1,5 @@
-var fName=document.getElementById("fname");
+var fName=document.getElementById("name");
 var fnamefb=document.getElementById("fnamefeedback");
-
-var lName=document.getElementById("lname");
-var lnamefb=document.getElementById("lnamefeedback");
 
 var mail=document.getElementById("email");
 var mailfb=document.getElementById("emailfeedback");
@@ -12,8 +9,7 @@ var pwfb=document.getElementById("pwdfeedback");
 
 function validate(){
 
-    var myFname=fName.value;
-    var myLname=lName.value;
+    var myFname=fName.value;    
     var myMail=mail.value;
     var myPwd=pw.value;
 
@@ -26,18 +22,11 @@ function validate(){
 // if fname valid
 if(regFname.test(myFname)){
 
-    fnamefb.innerHTML="Valid First Name";
+    fnamefb.innerHTML="Valid Name";
     fnamefb.style.color="green";
     fnamefb.style.visibility-"visible";
 
-    // if lname valid
-    if(regLname.test(myLname)){
-
-        lnamefb.innerHTML="Valid Last Name";
-        lnamefb.style.color="green";
-        lnamefb.style.visibility-"visible";
-
-        // if mail valid
+           // if mail valid
         if(regMail.test(myMail)){
 
             mailfb.innerHTML="Valid E-mail Id.";
@@ -45,7 +34,7 @@ if(regFname.test(myFname)){
             mailfb.style.visibility-"visible";
 
             // if pwd valid
-            if(myPwd.trim().length>=8){
+            if(myPwd.trim().length>=5){
 
                 pwfb.innerHTML="Valid Password";
                 pwfb.style.color="green";
@@ -70,14 +59,7 @@ if(regFname.test(myFname)){
 
         }
 
-    }
-
-    // if lname invalid
-    else{
-        lnamefb.style.visibility="visible";
-        return false;
-
-    }
+  
 
 }
 

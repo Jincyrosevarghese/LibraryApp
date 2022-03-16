@@ -88,7 +88,7 @@
 
 <div class="container">
     <div class="login">    
-        <form id="login" action="/login/check" method="GET">    
+        <form id="login" action="/login/check" method="GET" onsubmit="return validate()">    
             <label><b>User Name     
             </b>    
             </label>    
@@ -99,7 +99,7 @@
             </b>    
             </label>    
             <input type="Password" name="Pwd" required id="Pwd" placeholder="Password">
-            <label for="pwd" id="pwdvalid" style="color:red; visibility:hidden">Password should be minimum 8 characters</label> 
+            <label for="pwd" id="pwdvalid" style="color:red; visibility:hidden">Password should be minimum 5 characters</label> 
             <br><br>    
             <input type="submit" name="log" id="log" value="Log In Here">       
             <br><br>    

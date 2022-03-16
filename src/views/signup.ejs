@@ -14,7 +14,7 @@
     <!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-   
+
     <link href="css/styles.css" rel="stylesheet">
 
 </head>
@@ -63,7 +63,7 @@
                 <div class="col-md-7">
                     <h1>
                         Library
-                            <p class="lead"></p>
+                        <p class="lead"></p>
                     </h1>
                 </div>
                 <div class="col-md-5">
@@ -92,16 +92,21 @@
 
     <div class="container">
         <div class="login">
-            <form id="login" action="/signup/adduser" style="color: #757575;" >
+            <form id="login" action="/signup/adduser" style="color: #757575;" onsubmit="return validate()">
                 <label><b> Name :
                     </b>
                 </label>
                 <input type="text" name="name" required id="name" required placeholder="Name">
+                <label for="fname" id="fnamefeedback" style="color:red; visibility:hidden">Should contain only
+                    alphabets.</label>
                 <br><br>
                 <label><b>Email
                     </b>
                 </label>
                 <input type="email" name="uid" required id="email" required placeholder="Email">
+                <label for="email" id="emailfeedback" style="color:red; visibility:hidden">Enter valid e-mail
+                    id.</label>
+
                 <br><br>
                 <label><b>Phone
                     </b>
@@ -113,6 +118,9 @@
                 </label>
                 <input type="password" name="pwd" required id="pwd" required placeholder="Password">
                 <br><br>
+                <label for="pwd" id="pwdfeedback" style="color:red; visibility:hidden">Password should be minimum 8
+                    characters</label>
+
                 <label><b>Confirm Password
                     </b>
                 </label>
