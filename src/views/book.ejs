@@ -99,7 +99,16 @@
               <h3>Genre:<%=book.genre%></h3>
               <div class="row">
                 <div class="col-xs-9">
-                  <h4><span class="label label-default">97thfloor.com</span></h4><h4>
+                  <form action="/books/edit" method="POST">
+                    <input type="hidden" name="id" value="<%=book._id%>">
+                    <button id="editbtn" type="submit" class = "btn btn-success btn-sm" style="float: right;">Edit Book</button>
+                    </form>
+
+                    <form action="/books/delete" method="POST">
+                    <input type="hidden" name="id" value="<%=book._id%>">
+                    <button id="dltbtn" type="submit" class = "btn btn-danger btn-sm" style="float: right; margin-right: 25px">Delete Book</button>
+                    </form>
+
                   <small style="font-family:courier,'new courier';" class="text-muted">
                   </h4></div>
                 <div class="col-xs-3"></div>
