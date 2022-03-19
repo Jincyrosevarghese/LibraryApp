@@ -121,11 +121,12 @@
                 <label><b>Image URL
                     </b>
                 </label>
-                <input type="text" id="image" name="image" >
-                <br><br>
-                <input type="submit" name="log" id="log" value="<%=data.image%>" value="Save">
+                <input type="text" id="image" name="image" value="<%=data.image%>" >
                 <br><br>
                 
+                <br><br>
+                <input type="hidden" name="id" value="<%=data._id%>">
+                <input type="submit" name="log" id="log" value="Save">
             </form>
         </div>
     </div>
