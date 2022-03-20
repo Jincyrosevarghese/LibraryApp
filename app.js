@@ -11,7 +11,7 @@ const nav = [
 ];
 
 
-const authorRouter = require('./src/routes/authorroutes')(nav)
+const authorRouter = require('./src/routes/authorRoutes')(nav)
 const booksRouter = require('./src/routes/bookroutes')(nav)
 const signRouter = require('./src/routes/signuproutes')
 const loginRouter = require('./src/routes/loginroutes')
